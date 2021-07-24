@@ -196,6 +196,20 @@ public class Main {
             System.out.println("Wrong number");
         }
 
+        switch (month) {
+            case 1, 2, 12:
+                System.out.println("Winter");
+            case 3, 4, 5 :
+                System.out.println("Spring");
+            case 6, 7, 8 :
+                System.out.println("Summer");
+            case 9,10,11 :
+                System.out.println("Autumn");
+                default :
+                    System.out.println("wrong number");
+
+        }
+
 
     }
 
@@ -242,9 +256,6 @@ public class Main {
 
 }
 
-   // public static int[] getArray() throws IOException {
-        // создай и заполни массив
-//4return initializeArray();}
 
     public static int[] initializeArray() throws IOException {
         int[] array = new int[10];
@@ -258,9 +269,9 @@ public class Main {
 
     public static int max1(int[] array) {
         int max1 = array[0];
-        for (int i = 0; i < array.length; i++){
-            if (array[i] > max1) {
-                max1 = array[i];
+        for (int j : array) {
+            if (j > max1) {
+                max1 = j;
             }
         }
      return max1;
